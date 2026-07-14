@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="js-title">LESSON 12 HOMEWORK</title>
+
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+
+    <script>
+      
+      const addNum = (array,num) => {
+        newArray = array.map(value => value + num);
+        console.log(newArray);
+      }
+
+      addNum([1,2,-5],10);
+
+      const removeEgg = (foods) => {
+        newArray = foods.filter((value,count) => value != 'egg');
+        console.log(newArray);
+      }
+
+      removeEgg(['apple','egg','mushroom','egg','omlette','orange']);
+
+      const removeEgg2 = (foods) => {
+        count = 0
+        newArray = foods.filter((value) => {
+          if (value === 'egg' && count < 2){
+            count ++; 
+          } else{
+            return value;
+          }
+        });
+        console.log(newArray);
+      }
+
+      removeEgg2(['apple','egg','mushroom','egg','omlette','orange','egg','egg','naan']);
+
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <p>Calculator</p>
+    <p>
+      <button onclick = "
+        console.log(updateCalculation('1'));
+      ">1</button>
+
+      <button onclick = "
+        console.log(updateCalculation('2'));
+      ">2</button>
+
+    <button onclick = "
+       console.log(updateCalculation('3'));
+      ">3</button>
+
+      <button onclick = "
+        console.log(updateCalculation(' + '));
+      ">+</button>
+
+    </p>
+
+    <p>
+
+      <button onclick = "
+        console.log(updateCalculation('4'));
+      ">4</button>
+
+      <button onclick = "
+        console.log(updateCalculation('5'));
+      ">5</button>
+
+      <button onclick = "
+        console.log(updateCalculation('6'));
+      ">6</button>
+
+      <button onclick = "
+        console.log(updateCalculation(' - '));
+      ">-</button>
+
+    </p>
+
+    <p>
+
+      <button onclick = "
+        console.log(updateCalculation('7'));
+      ">7</button>
+
+      <button onclick = "
+        console.log(updateCalculation('8'));
+      ">8</button>
+
+      <button onclick = "
+        console.log(updateCalculation('9'));
+      ">9</button>
+
+      <button onclick = "
+        console.log(updateCalculation(' * '));
+      ">*</button>
+    </p>
+
+    <p>
+
+      <button onclick = "
+        console.log(updateCalculation('0'));
+      ">0</button>
+
+      <button onclick = "
+        console.log(updateCalculation('.'));
+      ">.</button>
+
+       <button onclick = "
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
+
+      <button onclick = "
+        console.log(updateCalculation(' / '));
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick = "
+        calculation = '';
+        console.log('Cleared.');
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation ='';
+
+      function updateCalculation(string){
+        calculation += string;
+        return calculation;
+      }
+    </script>
+    
+  </body>
+</html>

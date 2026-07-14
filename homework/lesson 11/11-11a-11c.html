@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 11 HOMEWORK</title>
+
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <script>
+      const nums = [10,20,30];
+      nums[2] = 99;
+      console.log(nums);
+
+      function getLastValue(array){
+        const lastValue = array[array.length - 1];
+        return lastValue;
+      }
+
+      console.log(getLastValue([1,20,22,24,5]));
+      console.log(getLastValue(['hi','hello','good']));
+
+      function arraySwap(array){
+        const element = array[0];
+        array[0] = array[array.length - 1];
+        array[array.length - 1] = element;
+        return array;
+      }
+
+      console.log(arraySwap([1,20,22,24,5]));
+      console.log(arraySwap(['hi','hello','good']));
+
+    </script>
+  </body>
+</html>

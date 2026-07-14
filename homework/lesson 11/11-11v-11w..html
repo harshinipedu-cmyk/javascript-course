@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 11 HOMEWORK</title>
+
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <script>
+      let loop = [];
+      for(let i=1;i<=20;i++){
+        loop.push(i);
+      }
+      console.log(loop);
+
+      function fizzbuzzProblem(loop){
+        result = [];
+        for(let i=0;i<loop.length;i++){
+          let element = loop[i];
+          if(element % 15 === 0){
+            result.push('fizzbuzz');
+          } else if(element % 3 === 0){
+            result.push('fizz');
+          } else if(element % 5 === 0){
+            result.push('buzz');
+          } else {
+            result.push(element);
+          }
+        }
+        return result;
+      }
+
+      console.log(fizzbuzzProblem(loop));
+
+
+      function findIndex(array,word){
+        for(let i = 0; i < array.length;i++){
+          if(array[i] === word){
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      function unique(array){
+        result = [];
+        for(let i=0;i<array.length;i++){
+          let element = array[i];
+          if(findIndex(result,element) !== -1){
+            continue;
+          } else{
+            result.push(element);
+          }
+        }
+        console.log(result);
+      }
+      unique(['green','red','blue','red','yellow','yellow','green','pink']);
+      unique(['green','red','blue','red','yellow','pink','orange','orange','black','white','white']);
+
+    </script>
+  </body>
+</html>

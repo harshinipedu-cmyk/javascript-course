@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+    <title>Booleans</title>
+  </head>
+
+  <body>
+
+    <script>
+      /*
+      if (15 >= 16) {
+        console.log('You can drive');
+      }else{
+        console.log('You cannot drive');
+      }
+
+      console.log(true && true);
+      console.log(true || false);
+      console.log(!true);
+      
+
+      if (0) {
+        console.log('Truthy');
+      }
+
+      const cartQuantity = 5;
+
+      if (cartQuantity) {
+        console.log('Cart has products');
+      }
+
+      console.log('text' / 5);
+
+      let variable1;
+      console.log(variable1);
+      */
+
+      const result = true ? 'truthy' : 'falsy'
+      console.log(result);
+      /* This works like an if - else statement
+      1st value is like a conditional statement 
+      if the conditional statment is true then 
+      the 1st sentence after the question mark is 
+      outputed whereas, otherwise the sentence 
+      after the colon(:) is outputed.*/
+
+      const message = false && 'hello';
+      console.log(message);
+
+      const currency = 'EUR' || 'USD';
+      console.log(currency);
+      /* if the currency chosen is not 'EUR'
+      then, 'USD' is outputed, else 'EUR' will 
+      be outputed by default */
+
+      const currency2 = undefined || 'USD';
+      console.log(currency2);
+
+
+    </script>
+
+  </body>
+</html>

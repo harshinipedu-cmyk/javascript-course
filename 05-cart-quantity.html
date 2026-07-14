@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+    <title>Cart Quantity</title>
+  </head>
+
+  <body>
+
+    <p>Cart Quantity</p>
+
+    <button onclick = "
+      console.log(`Cart Quantity: ${CartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick = "
+      if (CartQuantity < 10){
+        CartQuantity ++;
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      } else{
+        alert('the cart is full.');
+      }
+      
+    ">Add to Cart</button>
+
+    <button onclick = "
+      if (CartQuantity < 10){
+        CartQuantity += 2;
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      } else{
+        alert('the cart is full.');
+      }
+    ">+2</button>
+
+    <button onclick = "
+      if (CartQuantity < 10){
+        CartQuantity += 3;
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      } else{
+        alert('the cart is full.');
+      }
+    ">+3</button>
+
+    <button onclick = "
+      if (CartQuantity < 10){
+        CartQuantity += 4;
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      } else{
+        alert('the cart is full.');
+      }
+    ">+4</button>
+
+    <button onclick = "
+      if (CartQuantity < 10){
+        CartQuantity += 5;
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      } else{
+        alert('the cart is full.');
+      }
+    ">+5</button>
+
+    <button onclick = "
+      CartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart Quantity: ${CartQuantity}`);
+    ">Reset Cart</button>
+
+    <button onclick = "
+      CartQuantity --;
+      if (CartQuantity < 0){
+        console.log('Not enough items in cart');
+      } else{
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      }
+    ">Remove from Cart</button>
+
+    <button onclick = "
+      CartQuantity -= 2;
+      if (CartQuantity < 0){
+        console.log('Not enough items in cart');
+      } else{
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      }
+    ">-2</button>
+
+    <button onclick = "
+      CartQuantity -= 3;
+      if (CartQuantity < 0){
+        console.log('Not enough items in cart');
+      } else{
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      }
+    ">-3</button>
+
+    <script>
+
+      let CartQuantity = 0
+
+    </script>
+
+  </body>
+
+</html>

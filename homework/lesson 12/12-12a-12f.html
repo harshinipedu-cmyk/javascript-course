@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 12 HOMEWORK</title>
+
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+
+    <button class = "start-finished-button js-start-finished-button" >Start</button>
+
+    <button class ="add-to-cart-button js-addtocart-button">Add to Cart</button>
+
+    <p class="added-para"></p>
+    <script>
+      
+      const add = () => {
+        console.log(2+3);
+      }
+
+      add();
+      add();
+
+      function runTwice(param){
+        param();
+        param();
+      }
+
+      runTwice(function(){
+        console.log('12b');
+      });
+
+      runTwice(add);
+
+      let timeoutId;
+
+      document.querySelector('.js-start-finished-button').addEventListener('click', () => {
+        document.querySelector('.start-finished-button').innerHTML = 'Loading....'
+        setTimeout(function(){
+          document.querySelector('.start-finished-button').innerHTML = 'Finished!'
+        },1000)
+      });
+
+      document.querySelector('.js-addtocart-button').addEventListener('click', () => {
+          const messageElement = document.querySelector('.added-para');
+          messageElement.innerHTML = 'Added';
+
+          // First, cancel the previous timeout so that
+          // it doesn't remove the message too quickly.
+          clearTimeout(timeoutId);
+
+          timeoutId = setTimeout(function() {
+            messageElement.innerHTML = '';
+          }, 2000);
+      });
+    </script>
+  </body>
+</html>

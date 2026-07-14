@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 11 HOMEWORK</title>
+
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <script>
+      function removeEggs(food){
+        const reverseArray = food.slice().reverse()
+        result = [];
+        count = 0
+        for(let i=0;i<reverseArray.length;i++){
+          let item = reverseArray[i];
+          if (item === 'egg' && count < 2){
+            count ++
+            continue
+          }else{
+            result.push(item);
+          }
+        }
+        console.log(food);
+        console.log(reverseArray);
+        return result;
+      }
+
+      console.log(removeEggs(['egg','apple','orange','egg','green','ham','egg']));
+    </script>
+  </body>
+</html>

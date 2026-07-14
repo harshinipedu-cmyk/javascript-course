@@ -1,0 +1,16 @@
+.js-changeButton1,
+.js-changeButton2,
+.js-changeButton3{
+  background-color:black;
+  color:white;
+  padding: 10px 15px;
+  border:none;
+  border-radius:5px;
+  font-weight:bold;
+  margin-right:15px;
+  cursor:pointer;
+}
+.is-toggled{
+  background-color:rgb(230,230,230);
+  color: black;
+}

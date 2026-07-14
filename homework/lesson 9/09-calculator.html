@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <p class="js-show-calc"></p>
+    <p>
+      <button onclick = "
+        displayCalc(updateCalculation('1'));
+      ">1</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation('2'));
+      ">2</button>
+
+    <button onclick = "
+       displayCalc(updateCalculation('3'));
+      ">3</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation(' + '));
+      ">+</button>
+
+    </p>
+
+    <p>
+
+      <button onclick = "
+        displayCalc(updateCalculation('4'));
+      ">4</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation('5'));
+      ">5</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation('6'));
+      ">6</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation(' - '));
+      ">-</button>
+
+    </p>
+
+    <p>
+
+      <button onclick = "
+        displayCalc(updateCalculation('7'));
+      ">7</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation('8'));
+      ">8</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation('9'));
+      ">9</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation(' * '));
+      ">*</button>
+    </p>
+
+    <p>
+
+      <button onclick = "
+        displayCalc(updateCalculation('0'));
+      ">0</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation('.'));
+      ">.</button>
+
+       <button onclick = "
+        calculation = eval(calculation);
+        displayCalc(calculation);
+      ">=</button>
+
+      <button onclick = "
+        displayCalc(updateCalculation(' / '));
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick = "
+        calculation = '';
+        displayCalc(calculation);
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation = JSON.parse(localStorage.getItem('calculation')) || '';
+
+      function updateCalculation(string){
+        calculation += string;
+
+        localStorage.setItem('calculation',JSON.stringify(calculation));
+        return calculation;
+      }
+
+      function displayCalc(calculation){
+        const calcElement = document.querySelector('.js-show-calc');
+        calcElement.innerHTML = calculation;
+      }
+        
+    </script>
+    
+  </body>
+</html>

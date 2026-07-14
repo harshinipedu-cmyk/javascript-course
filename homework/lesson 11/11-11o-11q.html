@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 11 HOMEWORK</title>
+
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <script>
+      function searchStringInArray(array){
+        for(let i = 0; i < array.length;i++){
+          if(array[i] === 'search'){
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      console.log(searchStringInArray(['hello','good','search','end','fake']));
+      console.log(searchStringInArray(['empty','emotionless','scared','angry','love','hate','sad']));
+
+      function findIndex(array,word){
+        for(let i = 0; i < array.length;i++){
+          if(array[i] === word){
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      console.log(findIndex(['green','red','blue','red','yellow','pink'],'red'));
+      console.log(findIndex(['green','red','blue','red','yellow','pink'],'orange'));
+    </script>
+  </body>
+</html>
